@@ -1,0 +1,24 @@
+<form action="/update/<%= data.id %>" method="post">
+  <label for="username">Username:</label>
+  <input type="text" name="username" value="<%= data.username %>" required />
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="hide" value="<%= data.password %>" required />
+  <input type="checkbox" id="check" />Show password
+  <button type="submit">Perbarui Data</button>
+</form>
+<button id="back">BACK</button>
+<script>
+  const hide = document.getElementById("hide");
+  const check = document.getElementById("check");
+  const back = document.getElementById("back");
+  check.addEventListener("change", function () {
+    if (check.checked) {
+      hide.type = "text";
+    } else {
+      hide.type = "password";
+    }
+  });
+  back.addEventListener("click", function () {
+    window.location.href = "/data/<%= data.id %>";
+  });
+</script>

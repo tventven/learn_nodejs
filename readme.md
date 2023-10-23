@@ -1,0 +1,6 @@
+create connect database(done)
+create table in database(done)
+insert data(done)
+show (done)
+update(done)
+delete(done)

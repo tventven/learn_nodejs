@@ -1,0 +1,5 @@
+<p>Anda yakin ingin menghapus data dengan ID <%= data.id %>?</p>
+<form action="/delete/<%= data.id %>" method="post">
+  <button type="submit" class="btn btn-danger">Hapus</button>
+</form>
+<a href="/data" class="btn btn-secondary">Batal</a>
